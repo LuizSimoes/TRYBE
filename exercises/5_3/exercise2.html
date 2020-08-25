@@ -1,0 +1,77 @@
+<! DOCTYPE html> 
+<html> 
+<head> 
+<meta charset = utf-8 /> 
+<title> Calculadora </title> 
+</head> 
+<body> 
+  <label> Coloque esse número ao quadrado: 
+    <input type = "number" id = "entrada_quadrada" size = "2"> 
+  </label> 
+  <button id = "square-button"> Calcular </button> 
+  <br> <br> 
+  
+  <label> Metade deste número: 
+    <input type = "number" id ="half-input" size ="2"> 
+  </label> 
+  <button id ="half-button"> Calcular </button> 
+  <br> <br> 
+  
+  <label> 
+    Fração:
+    <input type = "number" id = "percent1-input" size = "2"> 
+  </label> 
+  <label> 
+    Todo:
+    <input type = "number" id = "percent2-input" size = "2"> 
+  </label> 
+  <button id = "percent-button"> Calcular </button> 
+  <br> <br> 
+  
+  <label> Calcular área de círculo com raio: 
+    <input type = "number" id = "area-input" size = "2"> 
+  </label> 
+  <button id = "area-button"> Calcular </button> 
+  <br> <br> 
+  <div id = "solution"> </div>
+
+  <script>
+
+    const buttonSquare = document.querySelector("#square-button");
+    const buttonHalf = document.querySelector("#half-button");
+    const buttonPercent = document.querySelector("#percent-button");
+    const buttonArea = document.querySelector("#area-button");
+
+    buttonSquare.addEventListener("click", square);
+    buttonHalf.addEventListener("click", half);
+    buttonPercent.addEventListener("click", percent);
+    buttonArea.addEventListener("click", area)
+
+    function square() {
+      let squareInput = document.querySelector("#entrada_quadrada");
+      resultado = Math.pow(parseInt(squareInput.value),2);
+      solution.innerHTML = "O número ao quadrado é " + resultado;
+    }
+    
+    function half() {
+      let halfInput = document.querySelector("#half-input")
+      resultado = parseInt(halfInput.value)/2;
+      solution.innerHTML = "A metade do número é " + resultado;
+    }
+
+    function percent() {
+      let fracao = document.querySelector("#percent1-input")
+      let todo = document.querySelector("#percent2-input")
+      resultado = (parseInt(fracao.value) / parseInt(todo.value))*100;
+      solution.innerHTML = "A porcentagem é " + resultado;      
+    }
+
+    function area() {
+      let raio = document.querySelector("#area-input");
+      resultado = (3.1416 * Math.pow(parseInt(raio.value),2));
+      solution.innerHTML = "A área do círculo é " + resultado; 
+    }
+  </script>
+  
+</body> 
+</html>

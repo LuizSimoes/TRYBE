@@ -1,0 +1,38 @@
+<! DOCTYPE html>
+<html>
+ <head>
+  <meta charset = "utf-8" />
+  <title> Caminhada por gatos </title>
+ </head>
+ <body>
+  
+  <img id="cat" style = "margin-left: 0px;" src = "http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+<script>
+  const cat = document.querySelector("#cat");
+
+  function inicio () {
+   if (parseInt(cat.style.marginLeft) < window.innerWidth) {
+    setInterval(catWalk, 50);
+   } else if (parseInt(cat.style.marginLeft) > 10){
+    setInterval(volta, 50);
+   }
+  }
+
+  function catWalk() {
+    let catMargin = parseInt(cat.style.marginLeft);
+    cat.style.marginLeft = catMargin + 10 + "px";
+    console.log(catMargin)
+  }
+
+  function volta() {
+    let catMargin = parseInt(cat.style.marginLeft);
+    cat.style.marginLeft = (catMargin - 10) + "px" ;
+  }
+
+  
+  setInterval(inicio, 50);
+
+</script>
+ </body>
+</html>
