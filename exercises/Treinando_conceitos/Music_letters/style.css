@@ -1,0 +1,47 @@
+/*Para fazer esse loader, vamos utilizar só a div.spinner e iremos usar o border
+para criar o entorno do nosso loader. O "pulo do gato" é que mudamos a cor de só um lado do quadrado,
+assim fará nosso efeito desejado, para isso, usaremos o border-left-color. Ao final é só usar o
+border-radius:50% para transformar num círculo: */
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: green;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+/*Como podem ver, ainda temos o animation ali, que vai ser o responsável por criar a animação, que é
+basicamente um keyframes fazendo uma rotação de 360 graus infinitamente: */
+@keyframes spin {
+  to { transform: rotate(360deg);}
+}
+.btn{
+  font-family: arial;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-green{
+  background: green;
+  color: #fff;
+  box-shadow: 0 5px 0 #006000;
+}
+.btn-green:hover{
+  background: #006000;
+  color: #fff;
+  box-shadow: 0 5px 0 #003f00;
+}
+.btn-green:active{
+  box-shadow: none;
+  position: relative;
+  top: 5px;
+}
+
+.btn:focus{
+  outline-style: none;
+}
