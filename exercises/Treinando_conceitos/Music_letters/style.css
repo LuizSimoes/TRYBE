@@ -1,3 +1,19 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+.topo {
+  background-color: green;
+}
+
+.form_principal {
+  display: flex;
+  justify-content: space-around;
+}
+
+
 /*Para fazer esse loader, vamos utilizar só a div.spinner e iremos usar o border
 para criar o entorno do nosso loader. O "pulo do gato" é que mudamos a cor de só um lado do quadrado,
 assim fará nosso efeito desejado, para isso, usaremos o border-left-color. Ao final é só usar o
