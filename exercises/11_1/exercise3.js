@@ -63,7 +63,7 @@ ReactDOM.render(<CardList />, document.getElementById('root'));
 /*
 É criado uma função Card que recebe (props), essa função irá montar a estrutura de cada card.
 Depois vem a função CardList que não recebe nada, ela retorna uma div geral (className = ‘row’) dos cards
-e monta uma div para cada card, dentro desta div do card é chamado a função Card (está em JSX <Card />,
-a qual pega os parâmetros recebidos (props) e monta o design do card.
+e monta uma div para cada card, dentro desta div do card é chamado a função Card (está em JSX <Card /> (isso me 
+parece que é um componente, que veremos no 11.2), a qual pega os parâmetros recebidos (props) e monta o design do card.
 Sendo assim, para criar novos cards é só acrescentar novas divs e colocando o que vocês quiserem nos parâmetros.
 */
